@@ -1,0 +1,16 @@
+default:
+    suites:
+        default:
+            contexts:
+                - Behat\MinkExtension\Context\MinkContext
+                - behatch:browser
+                - Schletter\GroundMount\Test\Context\FeatureContext
+    extensions:
+        Sanpi\Behatch\Extension: ~
+        Behat\MinkExtension: 
+            base_url: 'http://localhost/schletter-carport'
+            sessions: 
+                default:
+                    goutte: ~
+                javascript:
+                    selenium2: ~
